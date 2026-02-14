@@ -17,5 +17,5 @@ function updateSlide() {
   slides.style.transform = `translateX(-${currentSlide * 100}%)`;
 }
 
-// Inicializar
+// Iniciar
 updateSlide();
