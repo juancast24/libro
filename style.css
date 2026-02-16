@@ -9,7 +9,7 @@ body {
 }
 
 /* ============================= */
-/* 💻 DISEÑO ESCRITORIO (IGUAL) */
+/* 💻 DISEÑO ESCRITORIO */
 /* ============================= */
 
 .carousel {
@@ -39,28 +39,42 @@ body {
   object-fit: contain;
 }
 
-/* Botones escritorio */
+/* ============================= */
+/* 🔥 BOTONES EFECTO VIDRIO */
+/* ============================= */
+
 .prev, .next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: #444;
+  
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
   color: #fff;
-  border: none;
-  padding: 10px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  
+  padding: 12px 22px;
   cursor: pointer;
-  font-size: 18px;
-  border-radius: 5px;
+  font-size: 20px;
+  border-radius: 50px;
+
+  transition: all 0.3s ease;
 }
 
-.prev { left: 10px; }
-.next { right: 10px; }
+.prev { left: 15px; }
+.next { right: 15px; }
 
 .prev:hover, .next:hover {
-  background: #666;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-50%) scale(1.08);
 }
 
-/* vista movil */
+/* ============================= */
+/* 📱 DISEÑO SOLO PARA CELULAR */
+/* ============================= */
+
 @media (max-width: 768px) {
 
   body {
@@ -78,16 +92,12 @@ body {
     object-fit: contain;
   }
 
-  /* Botones estilo moderno */
   .prev, .next {
     font-size: 16px;
-    padding: 8px 14px;
-    background: rgba(0, 0, 0, 0.6);
-    backdrop-filter: blur(6px);
+    padding: 10px 16px;
     border-radius: 50px;
   }
 
   .prev { left: 5px; }
   .next { right: 5px; }
-
 }
