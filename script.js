@@ -71,14 +71,14 @@ function handleSwipeEnd(e) {
   if (!isDragging) return;
 
   const diff = e.clientX - startX;
-  const threshold = 80; 
+  const threshold = 80;
 
   slides.style.transition = "transform 0.4s ease";
 
-  if (diff < -threshold && currentSlide < totalSlides - 1) {
-    currentSlide++;
-  } else if (diff > threshold && currentSlide > 0) {
-    currentSlide--;
+  if (diff < -threshold) {
+    currentSlide = (currentSlide + 1) % totalSlides;
+  } else if (diff > threshold) {
+    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
   }
 
   slides.style.transform = `translateX(-${currentSlide * 100}%)`;
