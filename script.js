@@ -39,7 +39,7 @@ function updateSlide() {
   }, 400);
 }
 
-/* SWIPE */
+/*SWIPE*/
 
 let startX = 0;
 let currentX = 0;
@@ -95,3 +95,4 @@ document.addEventListener('keydown', (e) => {
 
 
 updateSlide();
+
